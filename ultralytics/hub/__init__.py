@@ -112,7 +112,7 @@ def check_dataset(path="", task="detect"):
     to the HUB. Usage examples are given below.
 
     Args:
-        path (str, optional): Path to data.zip (with data.yaml inside data.zip). Defaults to ''.
+        path (str, optional): Path to data.zip (with road_sign.yaml inside data.zip). Defaults to ''.
         task (str, optional): Dataset task. Options are 'detect', 'segment', 'pose', 'classify'. Defaults to 'detect'.
 
     Example:

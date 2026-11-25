@@ -1,0 +1,7 @@
+# Dataset paths are relative to this YAML file.
+train: road_sign_dataset/images/train
+val: road_sign_dataset/images/val
+test: road_sign_dataset/images/test
+
+# Class Names
+names: [Speedlimit, TrafficLight, Stop, Crosswalk]

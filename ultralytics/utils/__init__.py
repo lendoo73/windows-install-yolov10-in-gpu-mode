@@ -315,12 +315,12 @@ class ThreadingLocked:
         return decorated
 
 
-def yaml_save(file="data.yaml", data=None, header=""):
+def yaml_save(file="road_sign.yaml", data=None, header=""):
     """
     Save YAML data to a file.
 
     Args:
-        file (str, optional): File name. Default is 'data.yaml'.
+        file (str, optional): File name. Default is 'road_sign.yaml'.
         data (dict): Data to save in YAML format.
         header (str, optional): YAML header to add.
 
@@ -347,12 +347,12 @@ def yaml_save(file="data.yaml", data=None, header=""):
         yaml.safe_dump(data, f, sort_keys=False, allow_unicode=True)
 
 
-def yaml_load(file="data.yaml", append_filename=False):
+def yaml_load(file="road_sign.yaml", append_filename=False):
     """
     Load YAML data from a file.
 
     Args:
-        file (str, optional): File name. Default is 'data.yaml'.
+        file (str, optional): File name. Default is 'road_sign.yaml'.
         append_filename (bool): Add the YAML filename to the YAML dictionary. Default is False.
 
     Returns:

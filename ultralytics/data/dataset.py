@@ -58,7 +58,7 @@ class YOLODataset(BaseDataset):
         nkpt, ndim = self.data.get("kpt_shape", (0, 0))
         if self.use_keypoints and (nkpt <= 0 or ndim not in (2, 3)):
             raise ValueError(
-                "'kpt_shape' in data.yaml missing or incorrect. Should be a list with [number of "
+                "'kpt_shape' in road_sign.yaml missing or incorrect. Should be a list with [number of "
                 "keypoints, number of dims (2 for x,y or 3 for x,y,visible)], i.e. 'kpt_shape: [17, 3]'"
             )
         with ThreadPool(NUM_THREADS) as pool:

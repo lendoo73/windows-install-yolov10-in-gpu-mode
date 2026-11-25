@@ -1,3 +1,51 @@
+# YOLOv10 GPU Mode
+
+Windows GPU setup and YOLOv10 course examples based on the upstream
+[THU-MIG YOLOv10 implementation](https://github.com/THU-MIG/yolov10). The project includes a Gradio image/video
+demo, a cow-tracking example, a road-sign dataset, and training/evaluation outputs.
+
+## Setup
+
+Use Python 3.11, an NVIDIA GPU with a compatible driver, and PowerShell:
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu118
+python -m pip install -r requirements.txt
+python -m pip install -e .
+```
+
+Launch the Gradio demo:
+
+```powershell
+python app.py
+```
+
+For cow tracking, download a YOLOv10 checkpoint from the [official release](https://github.com/THU-MIG/yolov10/releases/tag/v1.1)
+and provide its path:
+
+```powershell
+python cow-counter.py --model path\to\yolov10m.pt --video inference\cow.mp4 --save
+```
+
+Official downloadable model weights are not included. Fine-tuned road-sign checkpoints are in
+`results/yolov10m-roadsign/weights/`. The road-sign dataset is in `datasets/road_sign_dataset`; its source is the
+[Road Sign Detection dataset on Kaggle](https://www.kaggle.com/datasets/andrewmvd/road-sign-detection).
+
+## Course material and licensing
+
+Course lessons: [YOLO Masterclass](https://www.udemy.com/course/yolo-masterclass-deep-learning-computer-vision-course/).
+The upstream code is distributed under the [GNU Affero General Public License v3.0](LICENSE); see the upstream
+project for its authorship and citation details.
+
+---
+
+## Upstream YOLOv10 project documentation
+
+The upstream README is retained below.
+
 ## Latest Updates -- [YOLOE: Real-Time Seeing Anything](https://github.com/THU-MIG/yoloe)
 
 Please check out our new release on [**YOLOE**](https://github.com/THU-MIG/yoloe).

@@ -426,7 +426,7 @@ class HUBDatasetStats:
     A class for generating HUB dataset JSON and `-hub` dataset directory.
 
     Args:
-        path (str): Path to data.yaml or data.zip (with data.yaml inside data.zip). Default is 'coco8.yaml'.
+        path (str): Path to road_sign.yaml or data.zip (with road_sign.yaml inside data.zip). Default is 'coco8.yaml'.
         task (str): Dataset task. Options are 'detect', 'segment', 'pose', 'classify'. Default is 'detect'.
         autodownload (bool): Attempt to download dataset if not found locally. Default is False.
 
@@ -476,7 +476,7 @@ class HUBDatasetStats:
     @staticmethod
     def _unzip(path):
         """Unzip data.zip."""
-        if not str(path).endswith(".zip"):  # path is data.yaml
+        if not str(path).endswith(".zip"):  # path is road_sign.yaml
             return False, None, path
         unzip_dir = unzip_file(path, path=path.parent)
         assert unzip_dir.is_dir(), (

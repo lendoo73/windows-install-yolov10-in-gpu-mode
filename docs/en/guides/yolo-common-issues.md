@@ -68,7 +68,7 @@ This section will address common issues faced while training and their respectiv
 - Make sure you pass the path to your `.yaml` file as the `data` argument when calling `model.train()`, as shown below:
 
 ```python
-model.train(data='/path/to/your/data.yaml', batch=4)
+model.train(data='/path/to/your/road_sign.yaml', batch=4)
 ```
 
 #### Accelerating Training with Multiple GPUs
@@ -87,7 +87,7 @@ model.train(data='/path/to/your/data.yaml', batch=4)
 
 ```python
 # Adjust the batch size and other settings as needed to optimize training speed
-model.train(data='/path/to/your/data.yaml', batch=32, multi_scale=True)
+model.train(data='/path/to/your/road_sign.yaml', batch=32, multi_scale=True)
 ```
 
 #### Continuous Monitoring Parameters

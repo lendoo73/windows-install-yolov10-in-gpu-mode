@@ -97,7 +97,7 @@ class AutoBackend(nn.Module):
             weights (str): Path to the model weights file. Defaults to 'yolov8n.pt'.
             device (torch.device): Device to run the model on. Defaults to CPU.
             dnn (bool): Use OpenCV DNN module for ONNX inference. Defaults to False.
-            data (str | Path | optional): Path to the additional data.yaml file containing class names. Optional.
+            data (str | Path | optional): Path to the additional road_sign.yaml file containing class names. Optional.
             fp16 (bool): Enable half-precision inference. Supported only on specific backends. Defaults to False.
             batch (int): Batch-size to assume for inference.
             fuse (bool): Fuse Conv2D + BatchNorm layers for optimization. Defaults to True.
